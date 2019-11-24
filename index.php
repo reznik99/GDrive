@@ -51,7 +51,6 @@ error_reporting(E_ALL);*/
 					</div>
 					<div class="actions"><p>Actions</p></div>
 				</div>
-				<div class='file'><div class='details'><p class='name'>passwords.txt</p><p class='size'>1129 Bytes</p><p class='date'>Sat 14:54</p></div><div class='actions'><i class='fas fa-download download'></i><i class='fas fa-trash-alt'></i><i class='fas fa-chevron-circle-down expand'></i></div><div class='extra_details'><p class='uploaded_by'>Uploaded by reznik99</p></div></div>
 				<div class='upload_file_button'><i class='fas fa-file-upload upload'></i></div>
 			</div>
 			<div class="upload_file_div">

@@ -1,7 +1,7 @@
 <?php
 require 'validate_user.php';
 // if($file=="")return;
-$file = 'cloud/'.$_GET['filename'];
+$file = '../cloud/'.$_GET['filename'];
 if (file_exists($file)) {
   header('Content-Description: File Transfer');
   header('Content-Type: application/octet-stream');

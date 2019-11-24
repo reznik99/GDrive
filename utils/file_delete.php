@@ -1,7 +1,7 @@
 <?php
 require 'validate_user.php';
 
-$file = 'cloud/'.htmlspecialchars($_GET['filename']);
+$file = '../cloud/'.htmlspecialchars($_GET['filename']);
 
 if (is_file($file)) {
   chmod($filename, 0777);
@@ -11,7 +11,7 @@ if (is_file($file)) {
   } else {
     $text = "File deletion failed!";
   }
-  header("Location: index.php?status=".$text);
+  header("Location: ../index.php?status=".$text);
   exit();
 }
 ?>
