@@ -1,6 +1,6 @@
 <?php
 /* Check if user logged in is valid */
-require 'validate_user.php';
+require 'utils/validate_user.php';
 
 /*ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -15,8 +15,8 @@ error_reporting(E_ALL);*/
 	<meta name="description" content="GoriniDrive, like Google Drive.. but Gorini">
 	<meta name="author" content="Francesco Gorini">
 	<link rel="manifest" href="/manifest.json">
-	<link rel="stylesheet" media="screen and (min-width: 601px)" href="style_main_desktop.css" />
-	<link rel="stylesheet" media="screen and (max-width: 600px)" href="style_main_mobile.css" />
+	<link rel="stylesheet" media="screen and (min-width: 601px)" href="styles/style_main_desktop.css" />
+	<link rel="stylesheet" media="screen and (max-width: 600px)" href="styles/style_main_mobile.css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
@@ -24,7 +24,7 @@ error_reporting(E_ALL);*/
 		<p></p>
 	</div>
 	<div class="nav">
-		<img class="logo" src="src/logo.png">
+		<img class="logo" src="res/logo.png">
 		<h1 class="welcome_header">Welcome <?php echo $username?></h1>
 		<div class="menu_btn">
 			<div class="bar1"></div>
@@ -57,7 +57,7 @@ error_reporting(E_ALL);*/
 			<div class="upload_file_div">
 				<h3>Select file to upload</h3>
 				<p>Max file size is <?php echo (int)(ini_get('upload_max_filesize'));?> MB</p>
-				<form action="file_upload.php" method="post" enctype="multipart/form-data" class="upload_file_form">
+				<form action="utils/file_upload.php" method="post" enctype="multipart/form-data" class="upload_file_form">
 					<input type="file" name="fileToUpload" class="file_to_upload">
 					<input type="submit" value="Upload file" name="submit" class="upload_file_btn">
 				</form>
@@ -68,12 +68,12 @@ error_reporting(E_ALL);*/
 		<div class="menu">
 			<a href="#">About</a>
 			<a href="http://francescogorini.com">francescogorini.com</a>
-			<a href="logout.php"> Logout <i class="fas fa-sign-out-alt"></i></a>
+			<a href="utils/logout.php"> Logout <i class="fas fa-sign-out-alt"></i></a>
 		</div>
 	</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="script.js"></script>
+<script src="scripts/script.js"></script>
 <script>
 //FUNCTION FOR DISPLAYING MESSAGE AFTER UPLOAD/DELETE
 function display_status(response){

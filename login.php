@@ -1,6 +1,6 @@
 <?php
 //connect to database
-require 'connect_to_db.php';
+require 'utils/connect_to_db.php';
 session_start();
 // error_reporting(E_ALL); ini_set('display_errors', 1);
 
@@ -86,8 +86,8 @@ if (isset($_POST['signup'])) {
   <meta name="description" content="GoriniDrive, like Google Drive.. but Gorini">
   <meta name="author" content="Francesco Gorini">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" media="screen and (min-width: 601px)" href="style_login_desktop.css" />
-  <link rel="stylesheet" media="screen and (max-width: 600px)" href="style_login_mobile.css" />
+  <link rel="stylesheet" media="screen and (min-width: 601px)" href="styles/style_login_desktop.css" />
+  <link rel="stylesheet" media="screen and (max-width: 600px)" href="styles/style_login_mobile.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
 </head>
 <body>
@@ -95,7 +95,7 @@ if (isset($_POST['signup'])) {
   <div class="action_result_div"><p></p></div>
   <!-- LOG IN -->
   <div class="log_in_wrapper">
-    <img class="logo" src="src/logo.png">
+    <img class="logo" src="res/logo.png">
     <form method="POST" class="log_in_form">
       <input class="input_field" name="username" type="text" placeholder="Username" autocorrect="off" autocapitalize="none" required ></input>
       <input class="input_field" name="password" type="password" placeholder="Password" autocorrect="off" autocapitalize="none" required></input>
@@ -108,7 +108,7 @@ if (isset($_POST['signup'])) {
   </div>
   <!-- SIGN UP -->
   <div class="log_in_wrapper hidden">
-    <img class="logo" src="src/logo.png">
+    <img class="logo" src="res/logo.png">
     <form method="POST" class="log_in_form">
       <input class="input_field" name="username" type="text" placeholder="Username" autocorrect="off" autocapitalize="none" required ></input>
       <input class="input_field" name="password" type="password" placeholder="Password" autocorrect="off" autocapitalize="none" required></input>
@@ -123,7 +123,7 @@ if (isset($_POST['signup'])) {
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="script_login.js"></script>
+<script src="scripts/script_login.js"></script>
 <script>
 //FUNCTION FOR DISPLAYING MESSAGE AFTER UPLOAD/DELETE
 function display_status(response){

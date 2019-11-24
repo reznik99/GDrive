@@ -19,7 +19,7 @@ $(document).ready(function(){
   function get_server_info() {
     $.ajax({
       type: "GET",
-      url: "get_server_info.php" ,
+      url: "utils/get_server_info.php" ,
       // data: { h: "michael" }, //pass data to php file
       dataType: "json",
       success : function(response) {//return data from php file
@@ -35,7 +35,7 @@ $(document).ready(function(){
   function get_cloud_storage(){
     $.ajax({
       type: "GET",
-      url: "get_cloud_info.php",
+      url: "utils/get_cloud_info.php",
       dataType: "json",
       success: function(response){
         if(response.ls!=undefined){
@@ -56,7 +56,7 @@ $(document).ready(function(){
     let target = $(".files_list");
     target.empty();//empty list
     for(let i=0;i<files.length;i+=2){
-      if(files[i]=="")continue;
+      if(files[i]==="")continue;
       target.append("<div class='file'><div class='details'><p class='name'>"+files[i+1]+"</p><p class='size'>"+files[i]+"Bytes</p><p class='date'>Sat 14:54</p></div><div class='actions'><i class='fas fa-download download'></i><i class='fas fa-trash-alt delete'></i><i class='fas fa-chevron-circle-down expand'></i></div><div class='extra_details'><p class='uploaded_by'>Uploaded by reznik99</p></div></div>");
     }
     //add top and bottom
@@ -67,7 +67,7 @@ $(document).ready(function(){
   function download_file(){
     let target = $(this).parent().parent();
     let file_name = target.find(".name").text();
-    window.location = "file_download.php?filename=" + encodeURIComponent(file_name);
+    window.location = "utils/file_download.php?filename=" + encodeURIComponent(file_name);
   }
 
   function toggle_upload_menu(){
@@ -78,13 +78,12 @@ $(document).ready(function(){
   function delete_file(){
     let file_name = $(this).parent().parent().find(".name").text();
     console.log('deleting '+file_name);
-    window.location = "file_delete.php?filename=" + encodeURIComponent(file_name);
+    window.location = "utils/file_delete.php?filename=" + encodeURIComponent(file_name);
   }
 
   function on_mobile(){
     return window.innerWidth <= 600;
   }
-
 
   //Listeners
   $(document).on("click", ".menu_btn", toggle_menu);
