@@ -166,6 +166,8 @@ body {
     border-radius: 0px;
     padding: 10px 10px;
     text-align: center;
+    background-color: #333;
+    color: #4688f4;
 }
 
 .example>.actions {
@@ -430,7 +432,7 @@ body {
     background-color: #fff;
     color: #4688f4;
     z-index: 2;
-    top: calc((30px + 1.5em)*-1);
+    top: -100%;
     -webkit-transition: 0.7s top;
     transition: 0.7s top;
 }
