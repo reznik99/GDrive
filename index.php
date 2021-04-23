@@ -37,14 +37,6 @@ error_reporting(E_ALL);*/
         </div>
     </div>
     <div class="wrapper">
-        <div class="left_column">
-            <div class="server_info">Server
-                <p class="server_status">Status: Online <i class="fas fa-globe-americas"></i></p>
-                <p class="server_temp">Temperature: <b></b> <i class="fas fa-temperature-low"></i></p>
-                <p class="server_since"><i class="fas fa-clock"></i></p>
-            </div>
-        </div>
-
         <div class="center_column">
             <div class="files_list">
                 <div class="file example">
@@ -74,6 +66,11 @@ error_reporting(E_ALL);*/
             <a href="#">About</a>
             <a href="http://francescogorini.com">francescogorini.com</a>
             <a href="utils/logout.php"> Logout <i class="fas fa-sign-out-alt"></i></a>
+            <div class="server_info">
+                <p class="server_status"><i class="fas fa-globe-americas"> : <b>Online</b> </i></p>
+                <p class="server_temp"><i class="fas fa-temperature-low"></i> <b></b> </p>
+                <p class="server_since"><i class="fas fa-clock"></i> <b></b> </p>
+            </div>
         </div>
     </div>
 </body>
