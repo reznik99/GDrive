@@ -57,7 +57,7 @@ $(document).ready(function () {
         target.empty();//empty list
         for (let i = 0; i < files.length; i += 2) {
             if (files[i] === "") continue;
-            target.append("<div class='file'><div class='details'><p class='name'>" + files[i + 1] + "</p><p class='size'>" + files[i] + "Bytes</p><p class='date'>Sat 14:54</p></div><div class='actions'><i class='fas fa-download download'></i><i class='fas fa-trash-alt delete'></i><i class='fas fa-chevron-circle-down expand'></i></div><div class='extra_details'><p class='uploaded_by'>Uploaded by reznik99</p></div></div>");
+            target.append("<div class='file'><div class='details'><p class='name'>" + files[i + 1] + "</p><p class='size'>" + (files[i] / 1000) + "KBs</p><p class='date'>Sat 14:54</p></div><div class='actions'><i class='fas fa-download download'></i><i class='fas fa-trash-alt delete'></i><i class='fas fa-chevron-circle-down expand'></i></div><div class='extra_details'><p class='uploaded_by'>Uploaded by reznik99</p></div></div>");
         }
         //add top and bottom
         target.prepend("<div class='file example'><div class='details'><p class='name'>name</p><p class='size'>size</p><p class='date'>date uploaded</p></div><div class='actions'><p>Actions</p></div></div>");
